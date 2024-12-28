@@ -1,0 +1,96 @@
+:root {
+    --primary-color: #646cff;
+    --hover-color: #535bf2;
+    --bg-color: #242424;
+    --text-color: rgba(255, 255, 255, 0.87);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.container {
+    background-color: #1a1a1a;
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.stopwatch {
+    text-align: center;
+}
+
+.display {
+    font-size: 3.5rem;
+    font-weight: bold;
+    font-family: monospace;
+    margin-bottom: 1.5rem;
+    color: var(--primary-color);
+}
+
+.controls {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: center;
+}
+
+.btn {
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.25s;
+}
+
+.btn:hover:not(:disabled) {
+    background-color: var(--hover-color);
+}
+
+.btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.laps {
+    max-height: 200px;
+    overflow-y: auto;
+    text-align: left;
+}
+
+.laps h3 {
+    margin-bottom: 0.5rem;
+    text-align: center;
+}
+
+#lapTimes {
+    list-style: none;
+    padding: 0;
+}
+
+#lapTimes li {
+    padding: 0.5rem;
+    border-bottom: 1px solid #333;
+    display: flex;
+    justify-content: space-between;
+}
+
+#lapTimes li:last-child {
+    border-bottom: none;
+}
